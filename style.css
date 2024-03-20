@@ -10,9 +10,19 @@
     height: 100vh;
     position: relative;
     background-color: black;
-    overflow: auto;
+    overflow: hidden;
 }
 
+.mcontainer a:hover{
+    text-shadow: 1px 1px 10px;
+}
+
+.wallpaper img{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    filter: blur(3px) grayscale(1);
+}
 
 .topnav {
     width: 100%;
@@ -24,8 +34,8 @@
     align-items: center;
     position: fixed;
     top: 0;
-    z-index: 1;
     transition: all .5s;
+    z-index: 2;
 }
 
 .header{
@@ -39,14 +49,15 @@
     font-size: 28px;
     position: fixed;
     top: 80px;
-    z-index: 1;
     border-radius: 0 0 10px 10px;
     box-shadow: 1px 2px 10px black;
+    z-index: 1;
 }
 
 .logo {
     display: flex;
     flex-direction: row;
+    cursor: default;
 }
 
 .logo-item {
@@ -54,9 +65,29 @@
     font-size: 32px;
 }
 
-.nome {
-    cursor: pointer;
+.modal-frame{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0,.6);
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    visibility: hidden;
+    transition: all .5s;
 }
+
+.modal-frame img{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    object-position: center;
+    backdrop-filter: blur(50px);
+}
+
 
 .btn-bar ul {
     display: flex;
@@ -68,13 +99,13 @@
     list-style: none;
     transition: all .5s;
     font-size: 32px;
-    width: 50%;
+    width: 100%;
     height: 100%;
-    background-color: beige;
+    background-color: rgb(245, 245, 220,.7);
     position: fixed;
     top: 0;
     right: -100%;
-    z-index:-1;
+    z-index:1;
 }
 
 .btn-bar li {
@@ -125,6 +156,8 @@
 
 .grid-galeria {
     width: 100%;
+    height: 100vh;
+    overflow: auto;
     position: absolute;
     padding-top: 80px;
     top: 0;
@@ -133,6 +166,7 @@
     grid-auto-rows: 140px;
     row-gap: 3px;
     column-gap: 3px;
+    z-index: 0;
 }
 
 .grid-galeria div{
@@ -158,7 +192,7 @@
 
 @media screen and (min-width:425px) {
     .btn-bar ul {
-        width: 35%;
+        width: 100%;
     }
 
     .grid-galeria {
@@ -202,7 +236,7 @@
 
 @media screen and (min-width:512px) {
     .btn-bar ul {
-        width: 30%;
+        width: 100%;
     }
 
     .grid-galeria {
@@ -254,7 +288,6 @@
         justify-content: space-around;
         height: 80px;
         width: fit-content;
-        z-index: 1;
         padding-top: 0;
     }
 
@@ -280,6 +313,8 @@
         grid-auto-flow: dense;
         row-gap: 5px;
         column-gap: 5px;
+        overflow-y:auto;
+        overflow-x: hidden;
     }
     
     .imgs img{
@@ -321,88 +356,3 @@
 }
 
 
-@media screen and (min-width:1100px) {
-    .btn-bar ul {
-        position: relative;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        flex-direction: row;
-        justify-content: space-around;
-        height: 80px;
-        width: fit-content;
-        z-index: 1;
-        padding-top: 0;
-    }
-
-    .btn-bar li {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .btn-bar i {
-        display: none;
-    }
-
-    .grid-galeria {
-        max-width: 90%;
-        position: absolute;
-        padding-top: 113px;
-        top: 0;
-        left: 50%;
-        transform: translate(-50%);
-        display: grid;
-        grid-template-columns: repeat(5,20%);
-        grid-auto-rows:250px;
-        grid-auto-flow: dense;
-        row-gap: 5px;
-        column-gap: 5px;
-    }
-    
-    .imgs img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-    }
-    
-    .grid-galeria img{
-        width: 100%;
-    }
-    
-    .span2{
-        grid-column: span 3;
-        grid-row: span 3;
-    }
-    
-    .span3{
-        grid-row: span 2;
-    }
-
-    .span4{
-        grid-column: span 2;
-        grid-row: span 2;
-    }
-
-    .img1{
-        grid-row:1/3;
-        grid-column: 1/3;
-    }
-
-    #img3{
-        grid-row: 3/5;
-    }
-
-    #img16{
-        grid-column: 3/6;
-    }
-
-    #img23{
-        grid-column: 1/3;
-        grid-row: 10/12;
-    }
-
-    #img19{
-        grid-row: 11/15;
-    }
-}

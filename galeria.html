@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAERYAABFuAAAR4gAAEeQAABGBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEWsAABH+AAAR/wAAEf8AABH/AAAR/wAAEaUAABEeAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGKAAAR+gAAEa8AABHAAAARtwAAEdAAABH2AAARVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARjgAAEUMAABGqAAARpAAAEcYAABF2AAARlgAAEUsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEvAAARTQAAEXAAABHTAAAR/wAAEf8AABH/AAAR8AAAEb0AABEvAAAROwAAEQMAAAAAAAAAAAAAAAAAAAAAAAARnAAAEf8AABH/AAAR/wAAEf4AABHvAAAR7wAAEf8AABH/AAAR/wAAEf8AABEjAAAAAAAAAAAAAAAAAAAAAAAAEWEAABH/AAAR/wAAEf8AABH7AAARRAAAEU8AABH/AAAR/wAAEf8AABHlAAAAAAAAAAAAAAAAAAAAAAAAAAAAABE+AAAR2QAAEUsAABE/AAARqgAAEboAABHFAAARfgAAEToAABFlAAAR6AAAEQYAAAAAAAAAAAAAAAAAAAAAAAARqQAAEXUAAAAAAAAAAAAAEQUAABHvAAARrwAAAAAAAAAAAAAAAAAAEboAABFjAAAAAAAAAAAAAAAAAAARKAAAEf8AABHMAAARRwAAEVIAABG8AAAR/wAAEf0AABGUAAARSAAAEVUAABHxAAAR/AAAESkAAAAAAAAAAAAAEVkAABH/AAAR/wAAEf8AABH/AAAR/wAAEf8AABH/AAAR/wAAEf8AABH/AAAR/wAAEf8AABFgAAAAAAAAAAAAABFpAAAR/wAAEf8AABH/AAAR/wAAEf8AABH/AAAR/wAAEf8AABH/AAAR/wAAEf8AABH/AAARXgAAAAAAAAAAAAARPQAAEf8AABH/AAAR/wAAEf8AABH/AAAR/wAAEf8AABH/AAAR/wAAEf8AABH/AAAR/wAAETIAAAAAAAAAAAAAAAAAABG3AAAR/wAAEf8AABH/AAAR/wAAEf8AABH/AAAR/wAAEf8AABH/AAAR/wAAEaYAAAAAAAAAAAAAAAAAAAAAAAAREAAAEb8AABH/AAAR/wAAEf8AABH/AAAR/wAAEf8AABH/AAAR/QAAEZQAABEGAAAAAAAAAAAAAAAAAAAAAAAAAAAAABECAAARWAAAEbUAABHpAAAR/QAAEfQAABHPAAARjQAAESoAAAAAAAAAAAAAAAAAAAAA/j8AAPgfAADwHwAA9F8AAPgfAADABwAA4YcAAOx3AADedwAAzDMAAMADAADAAwAAwAMAAMADAADgBwAA+B8AAA==" rel="icon" type="image/x-icon">
     <title>Galeria</title>
 </head>
 <body>
     <div class="mcontainer">
-
+        <div class="wallpaper"><img src="./Wallpaper.jpg" alt=""></div>
         <div class="topnav">
             <div class="logo">
                 <div class="logo-item skull"><img src="./vecteezy_cranio_1193660.png" height="80px"></div>
@@ -25,10 +26,10 @@
                 <label for="intectiveBtn"><i class="fa-solid fa-bars"></i></label>
 
                 <ul>
-                    <li><i class="fa-solid fa-skull-crossbones"></i></li>
                     <a href="./index.html"><li>Inicio</li></a>
                     <a href="./galeria.html"><li>Galeria</li></a>
                     <a href="#"><li>Contato</li></a>
+                    <a href="#"><li>Sobre</li></a>
                     <li><i class="fa-solid fa-skull-crossbones"></i></li>
                 </ul>
                 
@@ -50,32 +51,35 @@
         <div class="header"><p>— Galeria —</p></div>
 
         <div class="grid-galeria">
-            <div class="imgs span2 img1"><img src="./imagem1.jpg"></div>
-            <div class="imgs span3" id="img3"><img src="./imagem3.jpg"></div>
-            <div class="imgs"><img src="./imagem4.jpg"></div>
-            <div class="imgs"><img src="./imagem5.jpg"></div>
-            <div class="imgs"><img src="./imagem6.jpg"></div>
-            <div class="imgs span4"><img src="./imagem7.jpg"></div>
-            <div class="imgs span2"><img src="./imagem8.jpg"></div>
-            <div class="imgs"><img src="./imagem9.jpg"></div>
-            <div class="imgs"><img src="./imagem10.jpg"></div>
-            <div class="imgs"><img src="./imagem12.jpg"></div>
-            <div class="imgs span3"><img src="./imagem13.jpg"></div>
-            <div class="imgs"><img src="./imagem14.jpg"></div>
-            <div class="imgs"><img src="./imagem15.jpg"></div>
-            <div class="imgs span2" id="img16"><img src="./imagem16.jpg"></div>
-            <div class="imgs"><img src="./imagem17.jpg"></div>
-            <div class="imgs span4"><img src="./imagem18.jpg"></div>
-            <div class="imgs span2" id="img19"><img src="./imagem19.jpg"></div>
-            <div class="imgs"><img src="./imagem20.jpg"></div>
-            <div class="imgs span4"><img src="./imagem21.jpg"></div>
-            <div class="imgs span3"><img src="./imagem22.jpg"></div>
-            <div class="imgs" id="img23"><img src="./imagem23.jpg"></div>
+            <div class="imgs span2 "><img src="./imagem1.jpg" onclick="abrirModal('./imagem1.jpg')"></div>
+            <div class="imgs span3" id="img3"><img src="./imagem3.jpg" onclick="abrirModal('./imagem3.jpg')"></div>
+            <div class="imgs"><img src="./imagem4.jpg" onclick="abrirModal(src)"></div>
+            <div class="imgs"><img src="./imagem5.jpg" onclick="abrirModal(src)"></div>
+            <div class="imgs"><img src="./imagem6.jpg" onclick="abrirModal(src)"></div>
+            <div class="imgs span4"><img src="./imagem7.jpg" onclick="abrirModal()"></div>
+            <div class="imgs span2"><img src="./imagem8.jpg" onclick="abrirModal()"></div>
+            <div class="imgs"><img src="./imagem9.jpg" onclick="abrirModal()"></div>
+            <div class="imgs"><img src="./imagem10.jpg" onclick="abrirModal()"></div>
+            <div class="imgs"><img src="./imagem12.jpg" onclick="abrirModal()"></div>
+            <div class="imgs span3"><img src="./imagem13.jpg" onclick="abrirModal()"></div>
+            <div class="imgs"><img src="./imagem14.jpg" onclick="abrirModal()"></div>
+            <div class="imgs"><img src="./imagem15.jpg" onclick="abrirModal()"></div>
+            <div class="imgs span2" id="img16"><img src="./imagem16.jpg" onclick="abrirModal()"></div>
+            <div class="imgs"><img src="./imagem17.jpg" onclick="abrirModal()"></div>
+            <div class="imgs span4"><img src="./imagem18.jpg" onclick="abrirModal()"></div>
+            <div class="imgs span2" id="img19"><img src="./imagem19.jpg" onclick="abrirModal()"></div>
+            <div class="imgs"><img src="./imagem20.jpg" onclick="abrirModal()"></div>
+            <div class="imgs span4"><img src="./imagem21.jpg" onclick="abrirModal()"></div>
+            <div class="imgs span3"><img src="./imagem22.jpg" onclick="abrirModal()"></div>
+            <div class="imgs" id="img23"><img src="./imagem23.jpg" onclick="abrirModal()"></div>
         </div>
 
+        <div class="modal-frame">
+            <img src="">
+        </div>
         
     </div>
 
-
+    <script src="script.js"></script>
 </body>
 </html>
