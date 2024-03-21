@@ -26,6 +26,7 @@
     background-color: black;
     overflow: hidden;
     backdrop-filter: blur();
+    z-index: 3;
 }
 
 .mcontainer a:hover{
@@ -170,7 +171,7 @@
 
 .whats-btn {
     position: fixed;
-    bottom: 0;
+    bottom:5%;
     right: 0;
     cursor: pointer;
 }
@@ -226,8 +227,8 @@
 }
 
 .sobre-container video{
-    width:100vw;
-    height: 100%;
+    width:100%;
+    height: 100vh;
     object-fit: cover;
     object-position: center;
 }
@@ -246,8 +247,9 @@
 }
 
 .placeholder-container{
+    max-width: 425px;
     width: 95%;
-    height: 30%;
+    height:30%;
     background-color: rgb(0, 0, 0,.5);
     position: absolute;
     bottom: 0;
@@ -259,11 +261,13 @@
     align-items: center;
     border-radius: 10px;
     box-shadow: 1px 1px 10px;
+    overflow: auto;
 }
 
 .wallpaper-bio{
     background-color: rgb(0, 0, 0,.5);
     position: relative;
+    max-width: 425px;
     width: 95%;
     height: 30%;
     position: absolute;
@@ -279,7 +283,7 @@
     text-align: center;
     font-size: 20px;
     filter: none;
-    color: beige;
+    color: rgb(230, 188, 5);
     font-family: 'huntesla';
 }
 
@@ -292,8 +296,9 @@
     font-size: 20px;
     font-weight: 400;
     text-align: left;
-    color: beige;
+    color: rgb(230, 188, 5);
 }
+
 
 .foto img{
     width: 150px;
@@ -400,6 +405,7 @@
         height: 80px;
         width: fit-content;
         padding-top: 0;
+        z-index:3;
     }
 
     .btn-bar li {
