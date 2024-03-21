@@ -406,6 +406,7 @@
         width: fit-content;
         padding-top: 0;
         z-index:3;
+        transition: none;
     }
 
     .btn-bar li {
