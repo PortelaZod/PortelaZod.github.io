@@ -1,8 +1,22 @@
+@font-face {
+    font-family: 'echelon';
+    src: url(./DASHER-BF654dcfb0a41c8.ttf);
+}
+
+@font-face {
+    font-family:'snowmas';
+    src: url(./SNOWMAS-BF654caf522b78b.otf);
+}
+
+@font-face {
+    font-family:'huntesla';
+    src: url(./Huntesla-Gloficka-BF654da4e30fafe.otf);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Waiting Summer', sans-serif;
 }
 
 .mcontainer {
@@ -11,10 +25,11 @@
     position: relative;
     background-color: black;
     overflow: hidden;
+    backdrop-filter: blur();
 }
 
 .mcontainer a:hover{
-    text-shadow: 1px 1px 10px;
+    text-shadow: 2px 1px 10px;
 }
 
 .wallpaper img{
@@ -35,7 +50,9 @@
     position: fixed;
     top: 0;
     transition: all .5s;
-    z-index: 2;
+    z-index: 4;
+    font-family: 'echelon';
+
 }
 
 .header{
@@ -51,13 +68,17 @@
     top: 80px;
     border-radius: 0 0 10px 10px;
     box-shadow: 1px 2px 10px black;
-    z-index: 1;
+    z-index: 2;
+    font-family: 'echelon';
 }
 
 .logo {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    text-align: center;
     cursor: default;
+    font-family: 'echelon';
 }
 
 .logo-item {
@@ -69,6 +90,7 @@
     width: 100vw;
     height: 100vh;
     background-color: rgb(0, 0, 0,.6);
+    backdrop-filter: blur(10px);
     z-index: 2;
     position: fixed;
     top: 0;
@@ -85,7 +107,7 @@
     height: 80%;
     object-fit: contain;
     object-position: center;
-    backdrop-filter: blur(50px);
+    transition: all .5s;
 }
 
 
@@ -101,14 +123,17 @@
     font-size: 32px;
     width: 100%;
     height: 100%;
-    background-color: rgb(245, 245, 220,.7);
+    background-color: rgb(245, 245, 220,.4);
     position: fixed;
-    top: 0;
-    right: -100%;
-    z-index:1;
+    top: -100%;
+    left: 0;
+    z-index:-1;
+    backdrop-filter: blur(10px);
+    font-family: 'echelon';
 }
 
 .btn-bar li {
+    font-weight: 400;
     max-height: 38px;
 }
 
@@ -135,7 +160,7 @@
 }
 
 .btn-bar input:checked~ul {
-    right: 0;
+    top: 0;
 }
 
 .btn-bar i {
@@ -189,6 +214,92 @@
     grid-column: span 2;
     grid-row: span 2;
 }
+
+
+.sobre-container{
+    width: 100vw;
+    height: 100vh;
+    position:absolute;
+    top: 0;
+    overflow: hidden;
+    font-family:'snowmas';
+}
+
+.sobre-container video{
+    width:100vw;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.sobre-icon{
+    position: absolute;
+    top: 0;
+    padding: 20px;
+    font-size: 32px;
+    color: rgb(230, 188, 5);
+}
+
+.sobre-icon a{
+    text-decoration: none;
+    color:rgb(230, 188, 5) ;
+}
+
+.placeholder-container{
+    width: 95%;
+    height: 30%;
+    background-color: rgb(0, 0, 0,.5);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: row;
+    column-gap: 1%;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px;
+}
+
+.wallpaper-bio{
+    background-color: rgb(0, 0, 0,.5);
+    position: relative;
+    width: 95%;
+    height: 30%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px;
+    filter: blur(10px);
+}
+.foto{
+    flex: 30%;
+    text-align: center;
+    font-size: 20px;
+    filter: none;
+    color: beige;
+    font-family: 'huntesla';
+}
+
+.bio{
+    flex: 70%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
+    color: beige;
+}
+
+.foto img{
+    width: 150px;
+    border-radius: 100%;
+}
+
 
 @media screen and (min-width:425px) {
     .btn-bar ul {
