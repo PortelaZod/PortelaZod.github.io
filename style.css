@@ -317,10 +317,42 @@
 }
 
 
+.container-loader{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+    z-index: 4;
+}
+
+
+.loading-icon{
+    width: 100px;
+    height: 100px;
+    border: 2px solid rgb(245, 245, 220,0);
+    border-top-color: black;
+    animation: is-rotating 1s infinite;
+    border-radius: 100%;
+}
+
+
 .foto img{
     width: 150px;
     border-radius: 100%;
 }
+
+
+
+
+@keyframes is-rotating{
+    to {
+      transform: rotate(1turn);
+    }
+  }
 
 
 @media screen and (min-width:425px) {
