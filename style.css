@@ -337,7 +337,7 @@
     border: 2px solid rgb(245, 245, 220,0);
     animation: is-rotating 1s infinite;
     border-radius: 100%;
-    background-image:url(LOGO\ ICARO\ MELO\ TATTOO.png);
+    background-image:url(./minilogo.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
