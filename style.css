@@ -185,10 +185,11 @@
 }
 
 .whats-btn {
-    position: fixed;
+    position: sticky;
     bottom:0;
     right: 0;
     cursor: pointer;
+    z-index: 4;
 }
 
 .whats-btn img{
