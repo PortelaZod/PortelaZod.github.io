@@ -6,10 +6,12 @@ function abrirModal(src){
     modalFrame.style.visibility="visible"
     imgModal.src=(src)
     whatsBtn.style.display="none"
+    modalFrame.style.transform="scale(1)"
 }
 
 function fecharModal(){
     modalFrame.style.visibility="hidden"
+    modalFrame.style.transform="scale(0)"
 }
 // Modal Efect
 

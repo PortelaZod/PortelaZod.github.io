@@ -50,7 +50,7 @@
         <div class="header"><p>— Galeria —</p></div>
 
         <div class="grid-galeria">
-            <div class="imgs span2 "><img src="./imagem1.jpg" onclick="abrirModal('./imagem1.jpg')"></div>
+            <div class="imgs span2 "><img src="./imagem1.jpg"  onclick="abrirModal('./imagem1.jpg')"></div>
             <div class="imgs span3" id="img3"><img src="./imagem3.jpg" onclick="abrirModal('./imagem3.jpg')"></div>
             <div class="imgs"><img src="./imagem4.jpg" onclick="abrirModal('./imagem4.jpg')"></div>
             <div class="imgs"><img src="./imagem5.jpg" onclick="abrirModal('./imagem5.jpg')"></div>
@@ -100,8 +100,15 @@
             <div class="imgs" ><img src="./imagem51.jpeg" onclick="abrirModal('./imagem51.jpeg')"></div>
         </div>
 
-        <div class="modal-frame">
+        <div class="modal-frame" onclick="fecharModal()">
             <img src="">
+        </div>
+
+        <div class="container-loader">
+
+            <div class="loading-icon">
+        
+            </div>
         </div>
         
     </div>
