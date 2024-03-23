@@ -4,12 +4,12 @@
 }
 
 @font-face {
-    font-family:'snowmas';
+    font-family: 'snowmas';
     src: url(./SNOWMAS-BF654caf522b78b.otf);
 }
 
 @font-face {
-    font-family:'huntesla';
+    font-family: 'huntesla';
     src: url(./Huntesla-Gloficka-BF654da4e30fafe.otf);
 }
 
@@ -35,7 +35,7 @@
     z-index: 3;
 }
 
-.wallpaper-bio{
+.wallpaper-bio {
     width: 100vw;
     height: 100vh;
     background-color: blue;
@@ -43,7 +43,7 @@
     top: 0;
 }
 
-.wallpaper img{
+.wallpaper img {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
@@ -65,7 +65,7 @@
     z-index: 4;
 }
 
-.header{
+.header {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -98,10 +98,10 @@
     font-size: 32px;
 }
 
-.modal-frame{
+.modal-frame {
     width: 100vw;
     height: 100vh;
-    background-color: rgb(0, 0, 0,.6);
+    background-color: rgb(0, 0, 0, .6);
     backdrop-filter: blur(10px);
     z-index: 4;
     position: fixed;
@@ -111,11 +111,23 @@
     transform: scale(0);
 }
 
-.modal-frame img{
+.modal-frame img {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    object-position: center;
+    transition: all .5s;
+}
+
+.modal-frame video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 80%;
     height: 80%;
     object-fit: contain;
@@ -136,11 +148,11 @@
     font-size: 32px;
     width: 100%;
     height: 100%;
-    background-color: rgb(245, 245, 220,.4);
+    background-color: rgb(245, 245, 220, .4);
     position: fixed;
     top: -100%;
     left: 0;
-    z-index:-1;
+    z-index: -1;
     backdrop-filter: blur(10px);
     font-family: 'oldenglish';
     text-shadow: 1px 1px 10px;
@@ -186,13 +198,13 @@
 
 .whats-btn {
     position: sticky;
-    bottom:0;
+    bottom: 0;
     right: 0;
     cursor: pointer;
     z-index: 4;
 }
 
-.whats-btn img{
+.whats-btn img {
     width: 80px;
 }
 
@@ -209,50 +221,66 @@
     row-gap: 3px;
     column-gap: 3px;
     z-index: 0;
+    grid-auto-flow: dense;
 }
 
-.grid-galeria div{
+.grid-galeria div {
     overflow: hidden;
 }
 
-.imgs img{
+.imgs img {
     width: 100%;
     height: 100%;
     border-radius: 5px;
     transition: all .5s;
 }
 
-.imgs img:hover{
-    scale: 1.1;
-    filter:grayscale(1);
+
+.vd1 {
+    grid-row: 3/5;
+    grid-column: 1/3;
 }
 
-.span2{
+.vd1 video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+}
+
+
+.imgs img:hover {
+    scale: 1.1;
+    filter: grayscale(1);
+}
+
+.span2 {
     grid-column: span 2;
     grid-row: span 2;
 }
 
 
-.sobre-container{
+.sobre-container {
     width: 100vw;
     height: 100vh;
-    position:absolute;
+    position: absolute;
     top: 0;
     overflow: hidden;
-    font-family:'snowmas';
+    font-family: 'snowmas';
 }
 
-.sobre-container video{
+.sobre-container video {
     position: absolute;
     bottom: 0;
-    width:100%;
+    width: 100%;
     height: 90%;
     object-fit: cover;
     object-position: center;
     overflow: hidden;
 }
 
-.sobre-icon{
+.sobre-icon {
     position: absolute;
     top: 0;
     padding: 20px;
@@ -260,20 +288,20 @@
     color: rgb(230, 188, 5);
 }
 
-.sobre-icon a{
+.sobre-icon a {
     text-decoration: none;
-    color:rgb(230, 188, 5) ;
+    color: rgb(230, 188, 5);
 }
 
-.placeholder-container{
+.placeholder-container {
     max-width: 425px;
     width: 95%;
-    height:30%;
-    background-color: rgb(0, 0, 0,.5);
+    height: 30%;
+    background-color: rgb(0, 0, 0, .5);
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: row;
     column-gap: 1%;
@@ -283,8 +311,8 @@
     overflow: auto;
 }
 
-.wallpaper-bio{
-    background-color: rgb(0, 0, 0,.5);
+.wallpaper-bio {
+    background-color: rgb(0, 0, 0, .5);
     position: relative;
     max-width: 425px;
     width: 95%;
@@ -292,12 +320,13 @@
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     border-radius: 10px;
     box-shadow: 1px 1px 20px;
     filter: blur(10px);
 }
-.foto{
+
+.foto {
     flex: 30%;
     text-align: center;
     font-size: 20px;
@@ -306,9 +335,9 @@
     font-family: 'huntesla';
 }
 
-.bio{
+.bio {
     flex: 70%;
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -319,7 +348,7 @@
 }
 
 
-.container-loader{
+.container-loader {
     position: fixed;
     top: 0;
     width: 100vw;
@@ -332,20 +361,20 @@
 }
 
 
-.loading-icon{
+.loading-icon {
     width: 100px;
     height: 100px;
-    border: 2px solid rgb(245, 245, 220,0);
+    border: 2px solid rgb(245, 245, 220, 0);
     animation: is-rotating 1s infinite;
     border-radius: 100%;
-    background-image:url(./minilogo.png);
+    background-image: url(./minilogo.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 
-.foto img{
+.foto img {
     width: 150px;
     border-radius: 100%;
 }
@@ -353,11 +382,11 @@
 
 
 
-@keyframes is-rotating{
+@keyframes is-rotating {
     to {
-      transform: rotate(1turn);
+        transform: rotate(1turn);
     }
-  }
+}
 
 
 @media screen and (min-width:425px) {
@@ -371,36 +400,36 @@
         padding-top: 113px;
         top: 0;
         display: grid;
-        grid-template-columns: repeat(4,25%);
-        grid-auto-rows:200px;
+        grid-template-columns: repeat(4, 25%);
+        grid-auto-rows: 200px;
         grid-auto-flow: dense;
         row-gap: 3px;
         column-gap: 3px;
     }
-    
-    .imgs img{
+
+    .imgs img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: center;
     }
-    
-    .grid-galeria img{
+
+    .grid-galeria img {
         width: 100%;
     }
-    
-    .span2{
+
+    .span2 {
         grid-column: span 4;
         grid-row: span 2;
     }
-    
-    .span3{
+
+    .span3 {
         grid-column: span 2;
         grid-row: span 1;
     }
 
-    .img1{
-        grid-row:2/4 ;
+    .img1 {
+        grid-row: 2/4;
     }
 }
 
@@ -415,36 +444,36 @@
         padding-top: 113px;
         top: 0;
         display: grid;
-        grid-template-columns: repeat(4,25%);
-        grid-auto-rows:200px;
+        grid-template-columns: repeat(4, 25%);
+        grid-auto-rows: 200px;
         grid-auto-flow: dense;
         row-gap: 5px;
         column-gap: 5px;
     }
-    
-    .imgs img{
+
+    .imgs img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: center;
     }
-    
-    .grid-galeria img{
+
+    .grid-galeria img {
         width: 100%;
     }
-    
-    .span2{
+
+    .span2 {
         grid-column: span 2;
         grid-row: span 2;
     }
-    
-    .span3{
+
+    .span3 {
         grid-column: span 2;
         grid-row: span 1;
     }
 
-    .img1{
-        grid-row:2/4 ;
+    .img1 {
+        grid-row: 2/4;
     }
 }
 
@@ -459,7 +488,7 @@
         height: 80px;
         width: fit-content;
         padding-top: 0;
-        z-index:3;
+        z-index: 3;
         transition: none;
     }
 
@@ -480,51 +509,49 @@
         left: 50%;
         transform: translate(-50%);
         display: grid;
-        grid-template-columns: repeat(5,20%);
-        grid-auto-rows:200px;
+        grid-template-columns: repeat(5, 20%);
+        grid-auto-rows: 200px;
         grid-auto-flow: dense;
         row-gap: 5px;
         column-gap: 5px;
-        overflow-y:auto;
+        overflow-y: auto;
         overflow-x: hidden;
     }
-    
-    .imgs img{
+
+    .imgs img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: center;
     }
-    
-    .grid-galeria img{
+
+    .grid-galeria img {
         width: 100%;
     }
-    
-    .span2{
+
+    .span2 {
         grid-column: span 3;
         grid-row: span 3;
     }
-    
-    .span3{
+
+    .span3 {
         grid-row: span 2;
     }
 
-    .span4{
+    .span4 {
         grid-column: span 2;
 
     }
 
-    .img1{
-        grid-row:1/4;
+    .img1 {
+        grid-row: 1/4;
     }
 
-    #img3{
+    #img3 {
         grid-row: 3/5;
     }
 
-    #img16{
+    #img16 {
         grid-column: 3/6;
     }
 }
-
-
