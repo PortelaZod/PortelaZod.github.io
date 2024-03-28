@@ -255,11 +255,6 @@
     filter: grayscale(1);
 }
 
-.span2 {
-    grid-column: span 2;
-    grid-row: span 2;
-}
-
 
 .sobre-container {
     width: 100vw;
@@ -296,7 +291,7 @@
 .placeholder-container {
     max-width: 425px;
     width: 95%;
-    height: 30%;
+    height: fit-content;
     background-color: rgb(0, 0, 0, .5);
     position: absolute;
     bottom: 0;

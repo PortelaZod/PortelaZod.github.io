@@ -1,9 +1,8 @@
 const modalFrame=document.querySelector(".modal-frame")
-const videoModal=document.querySelector(".modal-frame video")
 const imgModal=document.querySelector(".modal-frame img")
 const whatsBtn=document.querySelector(".whats-btn")
 const loader=document.querySelector(".container-loader").style
-
+const video= document.querySelector(".autoplay")
 
 function abrirModal(src){
     modalFrame.style.visibility="visible"
@@ -21,7 +20,7 @@ function fecharModal(){
 
 
 function load(){
-    loader.display="none"
-    document.getElementById("autoplay").play()
+    loader.display="none";
+    video.autoplay = true;
 }
 
