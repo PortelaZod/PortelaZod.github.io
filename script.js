@@ -22,5 +22,6 @@ function fecharModal(){
 
 function load(){
     loader.display="none"
+    document.getElementById("autoplay").play()
 }
 
