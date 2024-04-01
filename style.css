@@ -123,7 +123,20 @@
     transition: all .5s;
 }
 
-.modal-frame video {
+.modal-frameVideo{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, .6);
+    backdrop-filter: blur(10px);
+    z-index: 4;
+    position: fixed;
+    top: 0;
+    visibility: hidden;
+    transition: all .5s;
+    transform: scale(0);
+}
+
+.modal-frameVideo video {
     position: fixed;
     top: 50%;
     left: 50%;
