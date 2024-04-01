@@ -202,10 +202,14 @@
     right: 0;
     cursor: pointer;
     z-index: 4;
+    width: fit-content;
+    border-radius: 100%;
+
 }
 
 .whats-btn img {
     width: 80px;
+    animation: whatsBtn .5s infinite;
 }
 
 .grid-galeria {
@@ -374,7 +378,11 @@
     border-radius: 100%;
 }
 
-
+@keyframes whatsBtn {
+    to{
+        scale: 1.1;
+    }
+}
 
 
 @keyframes is-rotating {
