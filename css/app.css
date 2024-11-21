@@ -1,0 +1,10 @@
+@keyframes beating {
+
+    50%{
+            scale: 1.1;
+        }
+}
+
+.whats{
+    animation: beating .7s infinite;
+}
