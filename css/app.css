@@ -33,3 +33,21 @@
 .logo_disco{
     animation: roll 2s infinite;
 }
+
+.main_cards{
+    overflow: hidden;
+    
+}
+
+.main_cards img{
+    transition: all .5s;
+}
+
+.main_cards a{
+    z-index: 2;
+}
+
+.scalez{
+    scale: 1.1;
+    
+}
