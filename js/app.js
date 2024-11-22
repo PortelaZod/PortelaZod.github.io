@@ -45,3 +45,8 @@ avaliacoes.forEach(e=>{
 })//Avaliaçoes Clientes
 
 
+
+let video = document.querySelector('video')
+    video.play()
+    
+    

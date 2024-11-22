@@ -5,6 +5,31 @@
         }
 }
 
+@keyframes roll {
+    
+    to{
+        transform: rotate(720deg);
+    }
+}
+
+@font-face {
+    font-family: 'olden';
+    src: url(../assets/fonts/OldEnglishFive.ttf);
+}
+
 .whats{
     animation: beating .7s infinite;
+}
+
+.formas_pagamentos{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.logo_disco{
+    animation: roll 2s infinite;
 }
