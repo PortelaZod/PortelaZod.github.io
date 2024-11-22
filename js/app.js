@@ -44,14 +44,14 @@ avaliacoes.forEach(e=>{
     modelo.querySelector('.user_comentario').innerHTML= e.comentario
 })//Avaliaçoes Clientes
 
-let cards = document.querySelectorAll('.main_cards')
-cards.forEach(element => {
-    element.addEventListener('touchstart',()=>{
-        element.querySelector('img').classList.add('scalez')
-    })
-    element.addEventListener('touchend',()=>{
-        element.querySelector('img').classList.remove('scalez')
-    })
-});
+// let cards = document.querySelectorAll('.main_cards')
+// cards.forEach(element => {
+//     element.addEventListener('touchstart',()=>{
+//         element.querySelector('img').classList.add('scalez')
+//     })
+//     element.addEventListener('touchend',()=>{
+//         element.querySelector('img').classList.remove('scalez')
+//     })
+// });
     
     

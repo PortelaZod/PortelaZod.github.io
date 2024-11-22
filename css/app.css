@@ -21,6 +21,14 @@
     animation: beating .7s infinite;
 }
 
+.whats_icon{
+    z-index: 3;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 100px;
+}
+
 .formas_pagamentos{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -36,18 +44,64 @@
 
 .main_cards{
     overflow: hidden;
-    
 }
 
 .main_cards img{
     transition: all .5s;
 }
 
-.main_cards a{
+.main_cards div{
     z-index: 2;
+    overflow: hidden;
+}
+
+.icones_contato{
+    width: 100%;
 }
 
 .scalez{
     scale: 1.1;
+    
+}
+
+@media (min-width: 992px){
+    .tattoos{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    ._main{
+        height: 400px;
+    }
+
+    ._main img{
+        height: 100%;
+    }
+
+    ._side{
+        height: 300px;
+    }
+
+    ._side img{ 
+        height: 100%;
+    }
+
+    .area_avaliacoes{
+        width: 30%;
+    }
+
+    .icones_contato{
+        width: 20%;
+    }
+
+    .whats_icon{
+        z-index: 3;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        margin: 50px;
+    }
     
 }
